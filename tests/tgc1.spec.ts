@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('can enter site', async ({ page }) => {
+test('tgc1_meters', async ({ page }) => {
   const email = process.env.tgc1_login_email
   const password = process.env.tgc1_login_password
 
@@ -21,6 +21,7 @@ test('can enter site', async ({ page }) => {
   const inputs = await page.getByPlaceholder('Введите значение')
   await expect(inputs).toHaveCount(2)
 
+  //an example of readings
   await inputs.first().fill('100')
   await inputs.nth(1).fill('42')
 });
