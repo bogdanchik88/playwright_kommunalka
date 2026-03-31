@@ -26,5 +26,6 @@ test('skvspb_readings', async ({ page }) => {
 
     const val = await page.locator('input[name="MeterSend[value1]"]')
     await val.clear()
+    //ВНЕСТИ АКТУАЛЬНЫЕ ПОКАЗАНИЯ
     await val.fill('67')
 })
