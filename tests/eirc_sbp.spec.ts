@@ -5,7 +5,7 @@ test('eirc_readings', async({page}) => {
     const password = process.env.eirc_login_password
 
     if (!login || !password) {
-        throw new Error('Не заданы tgc1_login_email или tgc1_password в .env');
+        throw new Error('Не заданы eirc_login_number или eirc_login_number в .env');
     }
 
     await page.goto('https://ikus.pesc.ru/auth/login')
